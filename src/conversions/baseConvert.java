@@ -25,7 +25,7 @@ public class baseConvert {
 				number += 1;
 			}
 			System.out.println(number);
-			output = output + number;
+			output = output + letterConvert.toLetters(number);
 			power -= 1;
 		}
 		System.out.println("Final Answer: " + output);
@@ -35,7 +35,7 @@ public class baseConvert {
 		int output = 0;
 		double power = inputString.length()-1;
 		for(int placement = 0; placement < inputString.length(); placement++){
-			output += Math.pow(base,power)*letterConvert.fromLetters(inputString.charAt(placement));
+			output += Math.pow(base,power)*letterConvert.fromLetters(inputString.charAt(placement), base);
 			System.out.println("Working output: " + output);
 			System.out.println("Working power: " + power);
 			System.out.println("Working base part: " + Math.pow(base,power));
